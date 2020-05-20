@@ -3,8 +3,12 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'npm --version'
+                sh 'npm i && npm run build'
+                sh 'cp -ar ./docs/.vuepress/dist /data'
             }
+        }
+        post {
+          
         }
     }
 }
