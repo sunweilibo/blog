@@ -7,23 +7,29 @@ module.exports = {
     ],
     nav: [
       { text: 'Home', link: '/' },
-      { text: '前端', link: '/fe/' },
+      { text: '前端', link: '/fe/jsExtend' },
       { text: '后端', link: '/rd/' },
       { text: '网络', link: '/net/' },
-      { text: 'GitHub', link: 'http://www.baidu.com' },
+      { text: 'GitHub', link: 'https://github.com/sunweilibo/blog' },
     ],
     sidebar: {
       '/fe/': [
         {
           title: '基础',
           children: [
-            ''
+            'jsExtend',
           ]
         },
         {
           title: '框架',
           children: [
             'frame'
+          ]
+        },
+        {
+          title: 'CSS',
+          children: [
+            'css'
           ]
         }
       ],
