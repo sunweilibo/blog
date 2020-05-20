@@ -7,8 +7,5 @@ pipeline {
                 sh 'cp -ar ./docs/.vuepress/dist /data'
             }
         }
-        post {
-          
-        }
     }
 }
