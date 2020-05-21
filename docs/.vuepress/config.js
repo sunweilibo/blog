@@ -29,7 +29,7 @@ module.exports = {
         {
           title: 'CSS',
           children: [
-            'css'
+            'px2rem'
           ]
         }
       ],
