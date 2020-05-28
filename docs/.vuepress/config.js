@@ -1,6 +1,6 @@
 module.exports = {
-  title: 'Hello VuePress',
-  description: 'Hello, my friend!',
+  title: 'Hello my friend!',
+  description: 'Welcome to my blog site',
   themeConfig: {
     head: [
       ['link', { rel: 'icon', href: `/icon.png` }],

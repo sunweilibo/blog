@@ -1,14 +1,13 @@
 ---
 home: true
-heroImage: ./.vuepress.icon.png
-actionText: 快速上手 →
-actionLink: /guide/
+actionText: 博客内容大纲 →
+actionLink: /fe/jsExtend
 features:
-- title: 简洁至上
-  details: 以 Markdown 为中心的项目结构，以最少的配置帮助你专注于写作。
-- title: Vue驱动
-  details: 享受 Vue + webpack 的开发体验，在 Markdown 中使用 Vue 组件，同时可以使用 Vue 来开发自定义主题。
-- title: 高性能
-  details: VuePress 为每个页面预渲染生成静态的 HTML，同时在页面被加载的时候，将作为 SPA 运行。
+- title: 前端知识
+  details: 主要包括js，框架以及css三大方面内容
+- title: 后端知识
+  details: 主要包括nodejs和koa、express和eggjs等框架的知识总结
+- title: 网络知识
+  details: 主要包括浏览器网络相关、HTTP协议相关以及nginx相关知识
 footer: MIT Licensed | Copyright © 2018-present xxxxxx
 ---
