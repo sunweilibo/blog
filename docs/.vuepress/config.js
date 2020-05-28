@@ -43,10 +43,29 @@ module.exports = {
       ],
       '/net/': [
         {
-          title: 'net',
+          title: '浏览器',
           children: [
-            ['','net简介'],
-            'http'
+            'browser/',
+          ]
+        },
+        {
+          title: 'HTTP',
+          children: [
+            'http/http',
+            'http/http1.x',
+            'http/http2',
+            'http/compare',
+          ]
+        },
+        {
+          title: 'NGNIX',
+          children: [
+            'nginx/nginx-basic',
+            'nginx/nginx-cmd',
+            'nginx/nginx-basic-config',
+            'nginx/nginx-trans-config',
+            'nginx/nginx-application',
+            'nginx/nginx-varias',
           ]
         }
       ]
