@@ -77,3 +77,7 @@ server {
 ```
 然后 `nginx -s reload` 重新加载配置。这时再访问 fe.sherlocked93.club/index.html 结果如下，请求中出现了我们刚刚配置的 Header：
 ![header](../img/header.jpg)
+
+## gzip配置
+## 负载均衡配置
+## 动静分离配置
