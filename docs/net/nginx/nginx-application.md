@@ -33,3 +33,17 @@ location / {
 }  
 ```
 复制代码这样当浏览设备切换成移动模式，再次刷新页面后，站点被自动切换到H5站。
+
+## 获取真实用户ip
+nginx配置
+```nginx
+location / {
+    proxy_set_header  Host $host;
+    proxy_set_header  X-real-ip $remote_addr;
+    proxy_set_header  X-Forwarded-For $proxy_add_x_forwarded_for;
+}
+```
++ `$remote_addr`获取到上一级代理的IP
++ `proxy_add_x_forwarded_for`获取到结果例如：(223.104.6.125, 10.10.10.45)，第一个是用户的真实IP，第二个是一级代理的IP，依此类推。
+
+可以从`X-Forwarded-For`中取第一个值获取到真实用户ip。

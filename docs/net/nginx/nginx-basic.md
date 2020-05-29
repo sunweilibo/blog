@@ -2,7 +2,7 @@
 title: 基础知识
 ---
 
-## 使用场景：
+## 使用场景
 nginx最常用的使用场景有以下三种
 + 静态资源服务，通过本地文件系统提供服务；
 + 反向代理服务，延伸出包括缓存、负载均衡等；
@@ -62,6 +62,47 @@ location ~ /huan {
 + !~和!~*分别为区分大小写不匹配及不区分大小写不匹配 的正则
 + / 通用匹配，任何请求都会匹配到。
 
+## try_files
+try_files的语法规则：
++ 格式1：`try_files file ... uri`;
++ 格式2：`try_files file ... =code`;
+
+可应用的上下文：server，location段
+
+语法解释：
++ 按指定的file顺序查找存在的文件，并使用第一个找到的文件进行请求处理
++ 查找路径是按照给定的root或alias为根路径来查找的
++ 如果给出的file都没有匹配到，则重新请求最后一个参数给定的uri，就是新的location匹配
++ 如果是格式2，如果最后一个参数是 = 404 ，若给出的file都没有匹配到，则最后返回404的响应码
+
+配置举例：
+```nginx
+location /images/ {
+    root /opt/html/;
+    try_files $uri   $uri/  /images/default.gif; 
+}
+```
+比如 请求 `127.0.0.1/images/test.gif` 会依次查找 1.文件`/opt/html/images/test.gif`   2.文件夹 `/opt/html/images/test.gif/`下的index文件  3. 请求`127.0.0.1/images/default.gif`
+
+其他用法
+```nginx
+location / {
+    try_files /system/maintenance.html
+              $uri $uri/index.html $uri.html
+              @mongrel;
+}
+
+location @mongrel {
+    proxy_pass http://mongrel;
+}
+```
+以上中若未找到给定顺序的文件，则将会交给location @mongrel处理（相当于匹配到了@mongrel来匹配）
+```nginx
+location / {
+            try_files $uri $uri/ /index.php?$query_string;
+}
+```
+未匹配到前面两个时，可以进行重定向
 ## location内部proxy配置
 1. `proxy_set_header`：在将客户端请求发送给后端服务器之前，更改来自客户端的请求头信息。
 2. `proxy_connect_timeout`：配置Nginx与后端代理服务器尝试建立连接的超时时间。
