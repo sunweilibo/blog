@@ -80,7 +80,7 @@ proxy_pass指令中在nginx的两个模块都有
 >
 >`ngx_stream_proxy_module`模块的proxy_pass指令只能在server段使用,只需要提供域名或ip地址和端口,可以理解为端口转发,可以是tcp端口,也可以是udp端口.
 >
->ngx-http-proxy-module模块中的proxy_pass指令需要在location段,location中的if段,limit_except段中使用,处理需要提供域名或ip地址和端口外,还需要提供协议.如 “http” 或 “https”,还有一个可选的url可以配置.
+>`ngx-http-proxy-module`模块中的proxy_pass指令需要在location段,location中的if段,limit_except段中使用,处理需要提供域名或ip地址和端口外,还需要提供协议.如 “http” 或 “https”,还有一个可选的url可以配置.
 
 下面介绍几种`proxy_pass`使用方式
 ### 绝对路径. 
@@ -128,7 +128,7 @@ server {
 ```
 ### path后有/
 `proxy_pass http://127.0.0.1:8080/static/;` 后面static有 “/”
-```ngnix
+```nginx
 server {
   listen      80;
   server_name www.test.com;

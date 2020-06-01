@@ -99,10 +99,11 @@ location @mongrel {
 以上中若未找到给定顺序的文件，则将会交给location @mongrel处理（相当于匹配到了@mongrel来匹配）
 ```nginx
 location / {
-            try_files $uri $uri/ /index.php?$query_string;
+  try_files $uri $uri/ =404;
+  error_page 404 /404.html;
 }
 ```
-未匹配到前面两个时，可以进行重定向
+未匹配到前面两个时，可以返回404,同时可以定义404指向页面。
 ## location内部proxy配置
 1. `proxy_set_header`：在将客户端请求发送给后端服务器之前，更改来自客户端的请求头信息。
 2. `proxy_connect_timeout`：配置Nginx与后端代理服务器尝试建立连接的超时时间。
