@@ -1,3 +1,4 @@
 module.exports = [
-  'md'
+  'md',
+  'iterm2'
 ]
