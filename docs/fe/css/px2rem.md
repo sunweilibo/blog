@@ -21,5 +21,5 @@ $ue-width: 640px;
 iPhone5的宽度是`640px`，页面最终完成效果也是`640px`，iPhone的dpr是2，所以设置  `<meta name="viewport" content="initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no">` 就可以了适配iPhone5了。当然这些东西lib-flexible都帮我们做好了。我只不过说一下，让好奇的小伙伴知道原理。
 ### flexible主要做了几点。
 + 动态改写<meta>标签
-+ 给<html>元素添加data-dpr属性，并且动态改写data-dpr的值。
-+ 给<html>元素添加font-size属性，并且动态改写font-size的值
++ 给`<html>`元素添加data-dpr属性，并且动态改写data-dpr的值。
++ 给`<html>`元素添加font-size属性，并且动态改写font-size的值

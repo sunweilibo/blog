@@ -1,4 +1,9 @@
+const FeNav = require('./fe.js');
+const RdNav = require('./rd.js');
+const NetNav = require('./net.js');
+const SoftwareNav = require('./software.js');
 module.exports = {
+
   title: 'Hello my friend!',
   description: 'Welcome to my blog site',
   themeConfig: {
@@ -10,65 +15,14 @@ module.exports = {
       { text: '前端', link: '/fe/jsExtend' },
       { text: '后端', link: '/rd/' },
       { text: '网络', link: '/net/' },
+      { text: '工具软件', link: '/software/md' },
       { text: 'GitHub', link: 'https://github.com/sunweilibo/blog' },
     ],
     sidebar: {
-      '/fe/': [
-        {
-          title: '基础',
-          children: [
-            'jsExtend',
-          ]
-        },
-        {
-          title: '框架',
-          children: [
-            'frame'
-          ]
-        },
-        {
-          title: 'CSS',
-          children: [
-            'px2rem'
-          ]
-        }
-      ],
-      '/rd/': [
-        {
-          title: '后端',
-          children: [
-            'test'
-          ]
-        }
-      ],
-      '/net/': [
-        {
-          title: '浏览器',
-          children: [
-            'browser/',
-          ]
-        },
-        {
-          title: 'HTTP',
-          children: [
-            'http/http',
-            'http/http1.x',
-            'http/http2',
-            'http/compare',
-          ]
-        },
-        {
-          title: 'NGNIX',
-          children: [
-            'nginx/nginx-basic',
-            'nginx/nginx-cmd',
-            'nginx/nginx-basic-config',
-            'nginx/nginx-trans-config',
-            'nginx/nginx-application',
-            'nginx/nginx-varias',
-          ]
-        }
-      ]
+      '/fe/': FeNav,
+      '/rd/': RdNav,
+      '/net/': NetNav,
+      '/software/': SoftwareNav,
     },
     dest: './docs/.vuepress/dist',
     ga: '',
