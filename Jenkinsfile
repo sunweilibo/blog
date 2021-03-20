@@ -4,7 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 sh 'npm run init && npm run build'
-                sh 'rm -rf /data/dist'
+                sh 'rm -rf /data/blog'
                 sh 'cp -a ./docs/.vuepress/dist /data/blog'
             }
         }
