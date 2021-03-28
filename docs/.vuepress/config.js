@@ -7,12 +7,13 @@ module.exports = {
   title: 'Hello my friend!',
   description: 'Welcome to my blog site',
   themeConfig: {
+    lastUpdated: 'Last Updated:',
     head: [
       ['link', { rel: 'icon', href: `/icon.png` }],
     ],
     nav: [
       { text: 'Home', link: '/' },
-      { text: '前端', link: '/fe/jsExtend' },
+      { text: '前端', link: '/fe/js/curry' },
       { text: '后端', link: '/rd/' },
       { text: '网络', link: '/net/' },
       { text: '工具软件', link: '/software/md' },

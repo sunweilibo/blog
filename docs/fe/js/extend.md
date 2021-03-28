@@ -1,5 +1,5 @@
 ---
-title: js继承
+title: 继承
 ---
 ## fe
 ### nishi

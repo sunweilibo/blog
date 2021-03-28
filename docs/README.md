@@ -1,7 +1,7 @@
 ---
 home: true
 actionText: 博客内容大纲 →
-actionLink: /fe/jsExtend
+actionLink: /fe/js/curry
 features:
 - title: 前端知识
   details: 主要包括js，框架以及css三大方面内容

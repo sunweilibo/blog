@@ -1,14 +1,15 @@
 module.exports = [
   {
-    title: '基础',
+    title: 'JS',
     children: [
-      'jsExtend',
+      'js/extend',
+      'js/curry'
     ]
   },
   {
     title: '框架',
     children: [
-      'frame'
+      'frame/vue'
     ]
   },
   {
