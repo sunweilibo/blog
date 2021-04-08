@@ -7,7 +7,7 @@ module.exports = {
   title: 'Hello my friend!',
   description: 'Welcome to my blog site',
   themeConfig: {
-    lastUpdated: 'Last Updated:',
+    lastUpdated: 'Last Updated',
     head: [
       ['link', { rel: 'icon', href: `/icon.png` }],
     ],

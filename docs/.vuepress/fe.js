@@ -3,7 +3,8 @@ module.exports = [
     title: 'JS',
     children: [
       'js/extend',
-      'js/curry'
+      'js/curry',
+      'js/debounce'
     ]
   },
   {

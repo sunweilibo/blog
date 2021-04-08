@@ -1,4 +1,5 @@
 module.exports = [
   'md',
-  'iterm2'
+  'iterm2',
+  'git'
 ]
