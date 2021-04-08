@@ -1,29 +1,19 @@
+const {getFiles} = require('./tools')
 module.exports = [
   {
     title: 'JS',
-    children: [
-      'js/extend',
-      'js/curry',
-      'js/debounce'
-    ]
+    children: getFiles('js/', '../fe/js')
   },
   {
     title: '框架',
-    children: [
-      'frame/vue'
-    ]
+    children: getFiles('frame/', '../fe/frame')
   },
   {
     title: 'CSS',
-    children: [
-      'css/center',
-      'css/px2rem'
-    ]
+    children: getFiles('css/', '../fe/css')
   },
   {
     title: 'WebGL',
-    children: [
-      'webgl/basic'
-    ]
+    children: getFiles('webgl/', '../fe/webgl')
   }
 ]
