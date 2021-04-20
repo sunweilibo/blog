@@ -67,10 +67,8 @@ VPromise.prototype.then = function(onFulfilled, onRejected) {
 ```diff
 function VPromise(exector) {
   /** 省略 */
--  this.onFulfilledCallbak; // then 方法赋值
--  this.onRejctedCallback; // then 方法赋值
-+  this.onFulfilledCallbaks = []; // then 方法赋值
-+  this.onRejctedCallbacks = []; // then 方法赋值
+  this.onFulfilledCallbak; // then 方法赋值
+  this.onRejctedCallback; // then 方法赋值
   function resolve(value) {
     if (me.status === PENDING) {
       me.status = FULFILLED;
