@@ -1,5 +1,5 @@
 ---
-title: git 常用操作
+title: 常用配置
 ---
 
 ### git 加速
