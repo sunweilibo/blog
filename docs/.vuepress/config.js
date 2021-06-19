@@ -14,7 +14,7 @@ module.exports = {
     nav: [
       { text: 'Home', link: '/' },
       { text: '前端', link: '/fe/js/curry' },
-      { text: '后端', link: '/rd/' },
+      { text: '后端', link: '/rd/tomcat' },
       { text: '网络', link: '/net/' },
       { text: '工具软件', link: '/software/md' },
       { text: 'GitHub', link: 'https://github.com/sunweilibo/blog' },
