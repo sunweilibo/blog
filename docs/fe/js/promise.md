@@ -45,7 +45,7 @@ function VPromise(exector) {
 VPromise.prototype.then = function(onFulfilled, onRejected) {
   const me = this;
   const onFulfilledCallbak = typeof onFulfilled === 'function' ? onFulfilled : value => value;
-  const onRejectedCallback = typeof onFulfilled === 'function' ? onRejected : reason => {throw reason};
+  const onRejectedCallback = typeof onRejected === 'function' ? onRejected : reason => {throw reason};
   if (me.status === FULFILLED) {
     onFulfilledCallbak(me.value)
   } else if (me.status === REJECTED) {
@@ -110,7 +110,7 @@ VPromise.prototype.then = function(onFulfilled, onRejected) {
 ### 多次调用.then
 `Promise` 是可以多次调用 then 方法的，例如
 ```javascript
-let p = new `Promise`((res) => {
+let p = new Promise((res) => {
     queueMicrotask(() => {
         res(10);
     }, 1000)
