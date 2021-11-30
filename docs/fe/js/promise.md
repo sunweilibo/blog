@@ -57,7 +57,7 @@ VPromise.prototype.then = function(onFulfilled, onRejected) {
 }
 ```
 ::: tip
-当 `VPromise` 的参数 `exector` 是同步执行时，在调用.then 时状态已经不再是 `pending`，则会直接调用o`nFulfilledCallback` 或者 `onRejectedCallback`即可；
+当 `VPromise` 的参数 `exector` 是同步执行时，在调用.then 时状态已经不再是 `pending`，则会直接调用`onFulfilledCallback` 或者 `onRejectedCallback`即可；
 
 当`exector`是异步执行`resolve`或者`reject`时，调用.then时状态还处于 `pending`。需要将`onFulfilledCallback`、`onRejectedCallback`赋值到this，通过resolve/reject来执行回调。
 :::

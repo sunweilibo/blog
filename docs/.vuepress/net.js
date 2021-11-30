@@ -2,9 +2,7 @@ const {getFiles} = require('./tools')
 module.exports = [
   {
     title: '浏览器',
-    children: [
-      'browser/',
-    ]
+    children: getFiles('browser/', '../net/browser')
   },
   {
     title: 'HTTP',
