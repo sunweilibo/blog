@@ -1,9 +1,5 @@
-const FeNav = require('./fe.js');
-const RdNav = require('./rd.js');
-const NetNav = require('./net.js');
-const SoftwareNav = require('./software.js');
+const {getDirFiles} = require('./tools')
 module.exports = {
-
   title: 'Hello my friend!',
   description: 'Welcome to my blog site',
   themeConfig: {
@@ -15,15 +11,15 @@ module.exports = {
       { text: 'Home', link: '/' },
       { text: '前端', link: '/fe/js/curry' },
       { text: '后端', link: '/rd/tomcat' },
-      { text: '网络', link: '/net/' },
-      { text: '工具软件', link: '/software/md' },
+      { text: '网络', link: '/net/http/http' },
+      { text: '工具软件', link: '/software/iterm2' },
       { text: 'GitHub', link: 'https://github.com/sunweilibo/blog' },
     ],
     sidebar: {
-      '/fe/': FeNav,
-      '/rd/': RdNav,
-      '/net/': NetNav,
-      '/software/': SoftwareNav,
+      '/fe/': getDirFiles('fe'),
+      '/rd/': getDirFiles('rd'),
+      '/net/': getDirFiles('net'),
+      '/software/': getDirFiles('software')
     },
     dest: './docs/.vuepress/dist',
     ga: '',

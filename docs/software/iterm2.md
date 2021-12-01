@@ -52,7 +52,7 @@ cd fonts
 rm -rf fonts
 ```
 安装好字体库之后，我们来设置iTerm2的字体，具体的操作是iTerm2 -> Preferences -> Profiles -> Text，在Font区域选中Change Font，然后找到Meslo LG字体。有L、M、S可选，看个人喜好：
-![iterm2font](./images/iterm2font.png)
+![iterm2font](./img/iterm2font.png)
 
 ### 安装其他配色方案
 配色方案在使用VIM或Colorful Log时会变得非常有用，同时界面也不会一片黑绿一样死板。
@@ -88,7 +88,7 @@ cd oh-my-zsh-agnoster-fcamblor/
 vi ~/.oh-my-zsh/themes/agnoster.zsh-theme
 ```
 找到相应配置项进行修改即可
-![agnostertheme](./images/agnostertheme.png)
+![agnostertheme](./img/agnostertheme.png)
 ### 安装语法高亮插件
 ```bash
 cd ~/.oh-my-zsh/custom/plugins/

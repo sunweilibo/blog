@@ -16,5 +16,7 @@
     "vuepress": "^1.8.2",
     "watchpack": "^2.1.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
 }

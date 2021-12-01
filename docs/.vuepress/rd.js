@@ -1,7 +1,2 @@
-const {getFiles} = require('./tools')
-module.exports = [
-  {
-    title: '后端',
-    children: getFiles('', '../rd')
-  }
-]
+const {getDirFiles} = require('./tools')
+module.exports = getDirFiles('rd')
